@@ -1,21 +1,21 @@
 ﻿using System;
 
-namespace EnthusiasticMoose
+namespace EnthusiasticCat
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+            Console.WriteLine("Welcome to the Enthusiastic Cat Simulator!");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine();
 
-            // MooseSays("H I, I'M  E N T H U S I A S T I C !");
-            // MooseSays("I really am enthusiastic");
+            // CatSays("H I, I'M  E N T H U S I A S T I C !");
+            // CatSays("I really am enthusiastic");
             Questions();
         }
 
-        static void MooseSays(string message)
+        static void CatSays(string message)
         {
             Console.WriteLine($@"
    |\---/|
@@ -27,7 +27,7 @@ namespace EnthusiasticMoose
             ");
         }
 
-        static bool MooseAsks(string question)
+        static bool CatAsks(string question)
         {
             Console.Write($"{question} (Y/N): ");
             string answer = Console.ReadLine().ToLower();
@@ -56,54 +56,54 @@ namespace EnthusiasticMoose
             int getNumber = r.Next(1, 20);
 
 
-            // bool isTrue = MooseAsks("Are dogs real?");
+            // bool isTrue = CatAsks("Are dogs real?");
             // if (isTrue)
             // {
-            //     MooseSays("Really? It seems very unlikely.");
+            //     CatSays("Really? It seems very unlikely.");
             // }
             // else
             // {
-            //     MooseSays("I  K N E W  I T !!!");
+            //     CatSays("I  K N E W  I T !!!");
             // }
 
-            // bool isEnthusiastic = MooseAsks("Do You Like Catnip?");
+            // bool isEnthusiastic = CatAsks("Do You Like Catnip?");
             // if (isEnthusiastic)
             // {
-            //     MooseSays("Yay!");
+            //     CatSays("Yay!");
             // }
             // else
             // {
-            //     MooseSays("You should try it!");
+            //     CatSays("You should try it!");
             // }
 
-            // bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+            // bool doesLoveCSharp = CatAsks("Do you love C# yet?");
             // if (doesLoveCSharp)
             // {
-            //     MooseSays("Good job sucking up to your instructor!");
+            //     CatSays("Good job sucking up to your instructor!");
             // }
             // else
             // {
-            //     MooseSays("You will...oh, yes, you will...");
+            //     CatSays("You will...oh, yes, you will...");
             // }
 
-            // bool isEverythingFine = MooseAsks("Do you want to know a secret?");
+            // bool isEverythingFine = CatAsks("Do you want to know a secret?");
             // if (isEverythingFine)
             // {
-            //     MooseSays("ME TOO!!!! I love secrets...tell me one!");
+            //     CatSays("ME TOO!!!! I love secrets...tell me one!");
             // }
             // else
             // {
-            //     MooseSays("Oh, no...secrets are the best, I love to share them!");
+            //     CatSays("Oh, no...secrets are the best, I love to share them!");
             // }
 
-            bool wantToSeeMagic = MooseAsks("Do you want to shake the magic cat ball?");
+            bool wantToSeeMagic = CatAsks("Do you want to shake the magic cat ball?");
             if (wantToSeeMagic)
             {
                 MagicCat(getNumber);
             }
             else
             {
-                MooseSays("Well fine then... rude!");
+                CatSays("Well fine then... rude!");
             }
 
 
@@ -114,83 +114,83 @@ namespace EnthusiasticMoose
         {
             if (randomNumber == 1)
             {
-                MooseSays("As I see it, yes.");
+                CatSays("As I see it, yes.");
             }
             if (randomNumber == 2)
             {
-                MooseSays("Ask again later.");
+                CatSays("Ask again later.");
             }
             if (randomNumber == 3)
             {
-                MooseSays("Better not tell you now");
+                CatSays("Better not tell you now");
             }
             if (randomNumber == 4)
             {
-                MooseSays("Cannot predict now");
+                CatSays("Cannot predict now");
             }
             if (randomNumber == 5)
             {
-                MooseSays("Concentrate and ask again");
+                CatSays("Concentrate and ask again");
             }
             if (randomNumber == 6)
             {
-                MooseSays("Don't count on it");
+                CatSays("Don't count on it");
             }
             if (randomNumber == 7)
             {
-                MooseSays("It is certain");
+                CatSays("It is certain");
             }
             if (randomNumber == 8)
             {
-                MooseSays("It is decidedly so");
+                CatSays("It is decidedly so");
             }
             if (randomNumber == 9)
             {
-                MooseSays("Most likely");
+                CatSays("Most likely");
             }
             if (randomNumber == 10)
             {
-                MooseSays("My reply is no");
+                CatSays("My reply is no");
             }
             if (randomNumber == 11)
             {
-                MooseSays("My sources say no");
+                CatSays("My sources say no");
             }
             if (randomNumber == 12)
             {
-                MooseSays("Outlook not so good");
+                CatSays("Outlook not so good");
             }
             if (randomNumber == 13)
             {
-                MooseSays("Outlook good");
+                CatSays("Outlook good");
             }
             if (randomNumber == 14)
             {
-                MooseSays("Reply hazy, try again");
+                CatSays("Reply hazy, try again");
             }
             if (randomNumber == 15)
             {
-                MooseSays("signs point to yes");
+                CatSays("signs point to yes");
             }
             if (randomNumber == 16)
             {
-                MooseSays("very doubtful");
+                CatSays("very doubtful");
             }
             if (randomNumber == 17)
             {
-                MooseSays("Yes!");
+                CatSays("Yes!");
             }
             if (randomNumber == 18)
             {
-                MooseSays("Without a doubt");
+                CatSays("Without a doubt");
             }
             if (randomNumber == 19)
             {
-                MooseSays("Yes - Definitely");
+                CatSays("Yes - Definitely");
             }
             if (randomNumber == 20)
             {
-                MooseSays("You may rely on it");
+                CatSays("You may rely on it");
             }
 
         }
