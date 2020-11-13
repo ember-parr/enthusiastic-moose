@@ -10,7 +10,7 @@ namespace EnthusiasticCat
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine();
 
-            // CatSays("H I, I'M  E N T H U S I A S T I C !");
+            CatSays("H I, I'M  E N T H U S I A S T I C !");
             // CatSays("I really am enthusiastic");
             Questions();
         }
@@ -34,9 +34,22 @@ namespace EnthusiasticCat
 
             while (answer != "y" && answer != "n")
             {
-                Console.Write($"{question} (Y/N): ");
-                answer = Console.ReadLine().ToLower();
+                if (Console.ReadKey().Key != ConsoleKey.Enter)
+                {
+                    Console.Write($"{question} (Y/N): ");
+                    answer = Console.ReadLine().ToLower();
+                }
+                else
+                {
+                    System.Environment.Exit(0);
+                }
+
             }
+
+            // while (Console.ReadKey().Key == ConsoleKey.Enter)
+            // {
+            //     System.Environment.Exit(0);
+            // }
 
             if (answer == "y")
             {
@@ -54,7 +67,19 @@ namespace EnthusiasticCat
 
             Random r = new Random();
             int getNumber = r.Next(1, 20);
-
+            // if (Console.ReadKey().Key == ConsoleKey.Enter)
+            // {
+            //     System.Environment.Exit(0);
+            // }
+            bool wantToSeeMagic = CatAsks("Do you want to shake the magic cat ball?");
+            if (wantToSeeMagic)
+            {
+                MagicCat(getNumber);
+            }
+            else
+            {
+                CatSays("Well fine then... rude!");
+            }
 
             // bool isTrue = CatAsks("Are dogs real?");
             // if (isTrue)
@@ -95,18 +120,6 @@ namespace EnthusiasticCat
             // {
             //     CatSays("Oh, no...secrets are the best, I love to share them!");
             // }
-
-            bool wantToSeeMagic = CatAsks("Do you want to shake the magic cat ball?");
-            if (wantToSeeMagic)
-            {
-                MagicCat(getNumber);
-            }
-            else
-            {
-                CatSays("Well fine then... rude!");
-            }
-
-
         }
 
 
@@ -192,6 +205,7 @@ namespace EnthusiasticCat
             {
                 CatSays("You may rely on it");
             }
+            Questions();
 
         }
     }
