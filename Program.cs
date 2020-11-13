@@ -10,6 +10,8 @@ namespace EnthusiasticCat
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine();
 
+
+            // let the cat speak!
             CatSays("H I, I'M  E N T H U S I A S T I C !");
             // CatSays("I really am enthusiastic");
             Questions();
@@ -27,24 +29,17 @@ namespace EnthusiasticCat
             ");
         }
 
-        static bool CatAsks(string question)
+        static string CatAsks(string question)
         {
             Console.Write($"{question} (Y/N): ");
             string answer = Console.ReadLine().ToLower();
 
-            while (answer != "y" && answer != "n")
-            {
-                if (Console.ReadKey().Key != ConsoleKey.Enter)
-                {
-                    Console.Write($"{question} (Y/N): ");
-                    answer = Console.ReadLine().ToLower();
-                }
-                else
-                {
-                    System.Environment.Exit(0);
-                }
+            // while (answer != "y" && answer != "n")
+            // {
+            //     Console.Write($"{question} (Y/N): ");
+            //     answer = Console.ReadLine().ToLower();
+            // }
 
-            }
 
             // while (Console.ReadKey().Key == ConsoleKey.Enter)
             // {
@@ -53,11 +48,19 @@ namespace EnthusiasticCat
 
             if (answer == "y")
             {
-                return true;
+                return "yes";
+            }
+            else if (answer == "n")
+            {
+                return "no";
+            }
+            else if (answer.Length < 1)
+            {
+                return "close";
             }
             else
             {
-                return false;
+                return "what";
             }
         }
 
@@ -71,14 +74,18 @@ namespace EnthusiasticCat
             // {
             //     System.Environment.Exit(0);
             // }
-            bool wantToSeeMagic = CatAsks("Do you want to shake the magic cat ball?");
-            if (wantToSeeMagic)
+            string wantToSeeMagic = CatAsks("Do you want to shake the magic cat ball?");
+            if (wantToSeeMagic == "yes")
             {
                 MagicCat(getNumber);
             }
-            else
+            else if (wantToSeeMagic == "no")
             {
                 CatSays("Well fine then... rude!");
+            }
+            else if (wantToSeeMagic == "close")
+            {
+                System.Environment.Exit(0);
             }
 
             // bool isTrue = CatAsks("Are dogs real?");
